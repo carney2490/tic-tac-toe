@@ -1,4 +1,4 @@
-board_fields = {1 => " ", 2 => " ", 3 => " ", 4 => " ", 5 => " ", 6 => " ",
+board_fields = {1 => " ", 2 => " ", 3 => " ", 4 => " ", 5 => " ", 6 => " ",      
                 7 => " ", 8 => " ", 9 => " "}
 empty_fields = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -12,7 +12,7 @@ def draw_board(bf)
   puts " 1 | 2 | 3 "
   puts "---+---+---"
   puts " 4 | 5 | 6 "
-  puts "---+---+---"
+  puts "---+---+-- "
   puts " 7 | 8 | 9 "
   puts ""
   puts "Game Board:"
@@ -57,11 +57,11 @@ def winner?(bf)
   end
 end
 
-#game starts
+
     draw_board(board_fields)
 
 while @game
-  #player turn
+  
     puts "Choose an empty field (1-9):"
     chosen_field = gets.chomp.to_i
 
@@ -96,4 +96,20 @@ end
 
 end
      
+
+
+#  comp_chosen_field = empty_fields.sample #this picks a random element
+#  board_fields[comp_chosen_field] = "O"
+#  fill_field(board_fields, empty_fields)
+#  draw_board(board_fields)
+#  winner?(board_fields)
+#  all_fields_filled?(empty_fields)
+#end
+
+
+
+
+
+
+
 
